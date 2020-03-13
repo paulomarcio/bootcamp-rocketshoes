@@ -23,7 +23,8 @@ module.exports = {
   },
   plugins: [
     'react',
-    'prettier'
+    'prettier',
+    'react-hooks'
   ],
   rules: {
     'prettier/prettier': 'error',
@@ -31,39 +32,10 @@ module.exports = {
       'warn',
       { extensions: ['.jsx', '.js'] }
     ],
-    'react/static-property-placement': [
-      'error',
-      'static public field'
-    ],
-    'react/state-in-constructor': 'off',
-    "no-console": ["error", { allow: ["tron"]}],
-    'no-param-reassign': ['error', { 'props': false }],
-    "jsx-a11y/control-has-associated-label": [ 2, {
-      "labelAttributes": ["label"],
-      "controlComponents": ["CustomComponent"],
-      "ignoreElements": [
-        "audio",
-        "canvas",
-        "embed",
-        "input",
-        "textarea",
-        "tr",
-        "th",
-        "video",
-      ],
-      "ignoreRoles": [
-        "grid",
-        "listbox",
-        "menu",
-        "menubar",
-        "radiogroup",
-        "row",
-        "tablist",
-        "toolbar",
-        "tree",
-        "treegrid",
-      ],
-      "depth": 3,
-    }],
+    'import/prefer-default-export': 'off',
+    'no-param-reassign': 'off',
+    'no-console': ['error', { allow: ['tron']}],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn'
   },
 };
