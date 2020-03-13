@@ -86,7 +86,9 @@ export default function Cart() {
                   <MdDelete
                     size={20}
                     color="#7159c1"
-                    onClick={() => dispatch(CartActions.removeFromCart(product.id))}
+                    onClick={() =>
+                      dispatch(CartActions.removeFromCart(product.id))
+                    }
                   />
                 </button>
               </td>
@@ -106,8 +108,3 @@ export default function Cart() {
     </Container>
   );
 }
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(CartActions, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
